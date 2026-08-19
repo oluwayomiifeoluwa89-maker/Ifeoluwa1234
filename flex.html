@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+</head>
+<body>
+    <style>
+        body {
+            background-color: rgb(6, 3, 37);
+        }
+    
+        .container {
+            background: rgb(102, 102, 109);
+            padding: 10px;
+            max-width: 550px;
+            border-radius: 10px;
+            height: 80vh;
+            margin-left: 100px;
+            margin-top: 50px;
+        }
+    
+        .form {
+            margin: 20px;
+    
+        }
+    
+        .row {
+            display: flex;
+            margin-bottom: 2%;
+            width: 100%;
+            /*background-color: red;*/
+            justify-content: space-between;
+    
+        }
+    
+        .fl {
+            width: 47%;
+            height: 20%;
+            color: rgb(238, 232, 232);
+        }
+    
+        .wi {
+            width: 100%;
+            border: 1px;
+            background-color: rgb(90, 90, 134);
+            border-radius: 5px;
+            height: 30px;
+            position: relative;
+        }
+    
+        .fa {
+              
+            width: 100%;
+            position: relative;
+        }
+    
+        .wi {
+            margin-top: 2%;
+            width: 100%;
+            height: 35px;
+            /*background-color: rgb(138, 134, 134);*/
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .ge {
+            width: 47%;
+            padding: 10px;
+            box-sizing: content-box;
+            background-color: blue;
+            border-radius: 20px;
+            margin-left: 20%;
+            color: white;
+            border: none;
+        }
+    
+        .pad {
+            margin-right: 6%;
+        }
+    
+        .country{
+            margin-top: 10px;
+            margin-left: 80%;  
+        }
+        .count{
+            display: flex;
+            
+        }
+        .aa {
+            padding-bottom: 15px;
+            padding-top: 5%;
+    
+        }
+    
+        .by {
+            
+            margin-left: 10%;
+            margin-bottom: 50px;
+    
+        }
+    
+        .ma {
+            width: 100%;
+            border-radius: 5px;
+            height: 90px;
+            padding-left: 30%;
+        }
+    
+        .gem {
+            width: 100%;
+            height: 50px;
+            padding-left: 0%;
+            box-sizing: border-box;
+            border-radius: 50px;
+            padding-top: 0px;
+            color: white;
+            background-color: blue;
+        }
+    </style>
+
+    <div class="container">
+        <form>
+            <div class="row">
+                <div class="fl">
+                    <label>First name *</label><br>
+                    <input class="wi" type="text">
+                </div>
+                <div class="fl">
+                    <label>Last name *</label><br>
+                    <input class="wi" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="fa">
+                    <label>Email Adresss *</label><br>
+                    <input class="wi" type="text">
+                </div>
+            </div>
+            <div class="fa">
+                <div>
+                    <label>Passsword <span>*</span></label>
+                    <div class="passsword-box">
+                    <input class="wi" type="passsword"  placeholder="********">
+                </div>
+            </div>
+            <div class="fa mh">
+                <label for="Message">Confirm Passsword *</label>
+                <input class="wi" type="password" placeholder="repeat password ">
+                
+            </div>
+            <div class="count"></div>
+            <label class="count" for="Message">Country *</label>
+            <div  class="country">
+            <select name="" id="">
+                <option value="">Nigeria</option>
+                <option value="">Ghana</option>
+                <option value="">kenya</option>
+                <option value=""> south Africa</option>
+            </select>
+            </div>
+            <input class="wi" type="color button">
+            </div>
+            <div class="aa">
+                <input type="checkbox">
+              <label>I agree to <a href=""> team of service and privacy policy </label>
+            </div>
+             <button class="ge">Register as Individual</button>
+            <div class="ma">
+            <p class="button text"> 
+                Already have acccount
+                <a href="#">Sign In</a>
+            </p>
+            </div>
+             </div>
+        </form>
+        </div>
+    </div>
+    </body>
+
+</body>
+</html>

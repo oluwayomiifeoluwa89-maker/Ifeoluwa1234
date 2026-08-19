@@ -1,139 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Join Ember & Ash</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,500&family=Space+Mono:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<style>
-    *{
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-    }
-    body{display: flex;
-
-    }
-    .container{
-        background-color: red;
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .inner-cont{
-        width: 40vw;
-        height: 60vh;
-        background-color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 2%;
-    }
-    .card{
-        background-color: rgb(243, 161, 8);
-        display: flex;
-        width: 50%;
-        height: 100%;
-        padding: 30px;
-        border-radius: 20px;
-        padding-top: 60px;
-        
-        
-        
-    }
-    .card2{
-        padding-top: 20px;
-        text-align: center;
-        color: white;
-        
-    }
-    .plan{
-        display: flex;
-        background-color: rgb(115, 163, 115);
-        width: 50%;
-        height: 100%;
-        padding: 30px;
-        border-radius: 20px;
-        padding-top: 70px;
-        
-        
-        
-    }
-    .plan2{
-        color: white;
-    }
-    .green{
-        background-color: rgb(12, 41, 12);
-        width: 50%;
-        width: 50%;
-        height: 100%;
-        padding: 30px;
-        border-radius: 20px;
-        padding-top: 70px;
-    }
-    .green2{
-        color: white;
-    }
-    .Ex{
-        margin-top: 80px;
-        color: black;
-        background-color: white;
-        border-radius: 10px;
-        border: none;
-        
-        
-    }
-    
-</style>
 <body>
-    <div class="container">
-        <div class="inner-cont">
 
-            <div class="card">
-                <div class="card2">
-                    <h2>SEDANS</h2>
-                    <p>choose a sedan for it affordablity and excellent fuel economy
-                        .ideal for cruising in the city
-                        or on your next road 
-                    </p>
-                    <div  class="Ex">
-                    <button class="E">Learn More</button>
-                    </div>
-                </div>
-            </div>
+<div class="ticket" id="ticket">
+  <div class="header">
+    <div class="eyebrow">No. 0427 — Roaster's Club</div>
+    <h1>Join Ember &amp; Ash</h1>
+    <p class="sub">One card, filled once. Your first bag ships with your welcome ticket.</p>
+  </div>
 
-            <div class="plan">
-                <div class="plan2">
-                    <h2>SUVS</h2>
-                    <p>Take an SUV for its spacious
-                        interior,power,and versatility.
-                        Perfect for your next family vacation
-                        and off-road adventuers.
-                    </p>
-                    <div class="Ex">
-                    <button class="E">Learn More </button>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="green">
-                <div class="green2">
-                    <h2>LUXURY</h2>
-                    <p>Cruise in the best car brands
-                        without the bloated prices.
-                        Enjoy the enhanced comfort
-                        of a luxury rental and arrive
-                        in style
-                    </p>
-                    <div class="Ex">
-                    <button class="E">Learn More </button>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+  <form id="regForm" novalidate>
+    <div class="field">
+      <label for="fullName">Full name <span class="req">*</span></label>
+      <input type="text" id="fullName" autocomplete="name" placeholder="Jordan Reyes">
+      <div class="msg" id="fullName-msg">Enter your name as you'd like it on the card.</div>
     </div>
+
+    <div class="field">
+      <label for="email">Email <span class="req">*</span></label>
+      <input type="email" id="email" autocomplete="email" placeholder="jordan@example.com">
+      <div class="msg" id="email-msg">That doesn't look like a valid email.</div>
+    </div>
+
+    <div class="field">
+      <label for="password">Password <span class="req">*</span></label>
+      <input type="password" id="password" autocomplete="new-password" placeholder="At least 8 characters">
+      <div class="strength" id="strength">
+        <span></span><span></span><span></span><span></span>
+      </div>
+      <div class="msg" id="password-msg">Use at least 8 characters, with a number.</div>
+    </div>
+
+    <div class="field">
+      <label for="confirm">Confirm password <span class="req">*</span></label>
+      <input type="password" id="confirm" autocomplete="new-password" placeholder="Type it again">
+      <div class="msg" id="confirm-msg">Passwords don't match.</div>
+    </div>
+
+    <div class="check-row">
+      <input type="checkbox" id="terms">
+      <label for="terms">I agree to the roasting schedule, billing terms, and the occasional bad coffee pun by email.</label>
+    </div>
+    <div class="msg" id="terms-msg" style="margin-top:-16px;margin-bottom:16px;">Please accept the terms to continue.</div>
+
+    <button type="submit">Punch my card</button>
+    <div class="footer-note">ROASTED WEEKLY · SHIPPED FRESH</div>
+  </form>
+
+  <div class="success" id="success">
+    <div class="stamp">✓</div>
+    <h2>You're in.</h2>
+    <p>Welcome to the club, <span id="successName">friend</span>. Check your inbox to confirm your email.</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
